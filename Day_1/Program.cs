@@ -1,43 +1,33 @@
 ﻿using System;
 
-namespace Day_1
-{
+namespace B1_2380601602_NguyenDinhAnNinh_BTVN {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.Write("Nhap vao a: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Nhap vao b: ");
+            int b = int.Parse(Console.ReadLine());
+            Console.Write("Nhap vao c: ");
+            int c = int.Parse(Console.ReadLine());
 
-            Console.Write("Nhap vao ten cua ban: ");
-            string fullName = Console.ReadLine();
-            string tempFullName = fullName;
-            char kiTu = ' ';
-            string[] words = fullName.Split(kiTu, StringSplitOptions.RemoveEmptyEntries);
+            Console.Write("Ket qua cua input ban nhap: ");
+            PhuongTrinhBac2 pt = new PhuongTrinhBac2(a, b, c);
+            Console.WriteLine(pt.Calc());
 
-            for (int i = 0; i < words.Length; i++)
-            {
-                words[i] = words[i].Trim();
+            Console.WriteLine("Test case: ");
+            List<PhuongTrinhBac2> tests = new List<PhuongTrinhBac2>();
+            tests.Add(new PhuongTrinhBac2(0, 2, -4));  
+            tests.Add(new PhuongTrinhBac2(0, 0, 0)); 
+            tests.Add(new PhuongTrinhBac2(0, 0, 5));  
+            tests.Add(new PhuongTrinhBac2(1, -5, 6)); 
+            tests.Add(new PhuongTrinhBac2(1, 2, 1));   
+            tests.Add(new PhuongTrinhBac2(2, 3, 4));   
+            tests.Add(new PhuongTrinhBac2(5, 0, -20));
+            foreach (PhuongTrinhBac2 x in tests) Console.WriteLine(x.Calc());
 
-                if (words[i].Length > 0)
-                {
-                    words[i] = char.ToUpper(words[i][0]) + words[i].Substring(1).ToLower();
-                }
-            }
-            fullName = string.Join(" ", words);
-
-            Console.Write("Nhap vao tuoi: ");
-            int tuoi;
-            while (true) {
-                tuoi = Convert.ToInt32(Console.ReadLine());
-                if (tuoi > 0 && tuoi < 134) break;
-                else Console.Write("Vui long nhap lai tuoi !!! : ");
-            }
-            Console.WriteLine("--------------------------------------------");
-            bool result = string.Equals(fullName, tempFullName);
-            Console.Write($"-> Ho ten cua you la: {fullName}");
-            if (!result) Console.WriteLine(" (==^3^==) [TEN CUA BAN DA DUOC CHUAN HOA BOI TOI]");
-            else Console.WriteLine();
-            Console.WriteLine($"-> WHATTTTTT !!! Nam sau ban {++tuoi} roi a =)))))))))");
 
         }
-    }
+    }    
 }
