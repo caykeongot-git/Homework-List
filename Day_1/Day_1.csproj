@@ -6,6 +6,7 @@
     <RootNamespace>_2380601602_NguyenDinhAnNinh_BTVN_B1</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>Day_1.Program</StartupObject>
   </PropertyGroup>
 
 </Project>
