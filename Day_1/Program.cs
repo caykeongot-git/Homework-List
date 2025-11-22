@@ -15,7 +15,7 @@ namespace Day_1 {
             Console.Write("Ket qua cua input ban nhap: ");
             PhuongTrinhBac2 pt = new PhuongTrinhBac2(a, b, c);
             Console.WriteLine(pt.Calc());
-
+            
             Console.WriteLine("Test case: ");
             List<PhuongTrinhBac2> tests = new List<PhuongTrinhBac2>();
             tests.Add(new PhuongTrinhBac2(0, 2, -4));  
