@@ -1,0 +1,18 @@
+Ly|Thi Bong|23456
+Nguyen||4555
+Tran|Chanh Truc
+||123456
+Hoang||
+Pham|Minh Anh|7890
+Le|Thi Mai|34567
+Nguyen|Van Duc|11223
+Bui||9988
+Dang|Thi Lan
+Vu|Quoc Huy|5566
+Do|Thi Hong|7788
+Ho|Minh Tuan
+Nguyen|Thi Hoa|33445
+Pham||6677
+Tran|Van Bao|
+Le|Thi Thu|2211
+Nguyen|Van Kien|44332
