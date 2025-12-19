@@ -1,4 +1,4 @@
-﻿namespace Day_6
+﻿namespace Lab.GUI
 {
     partial class Form1
     {
@@ -28,35 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblTitle = new Label();
             grbInformation = new GroupBox();
             cbFaculty = new ComboBox();
             txtAvg = new TextBox();
             lblAvg = new Label();
             lblFaculty = new Label();
-            txtName = new TextBox();
-            lblName = new Label();
+            txtFullName = new TextBox();
             txtCode = new TextBox();
+            lblFullName = new Label();
             lblCode = new Label();
-            btnCreate = new Button();
-            btnUpdate = new Button();
-            btnDelete = new Button();
-            btnExit = new Button();
+            lblTitle = new Label();
             dgvData = new DataGridView();
+            btnExit = new Button();
+            btnDelete = new Button();
+            btnUpdate = new Button();
+            btnCreate = new Button();
             grbInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            lblTitle.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTitle.ForeColor = Color.Blue;
-            lblTitle.Location = new Point(12, 9);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(1258, 139);
-            lblTitle.TabIndex = 0;
-            lblTitle.Text = "Quản lí thông tin Sinh Viên";
-            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // grbInformation
             // 
@@ -64,23 +53,23 @@
             grbInformation.Controls.Add(txtAvg);
             grbInformation.Controls.Add(lblAvg);
             grbInformation.Controls.Add(lblFaculty);
-            grbInformation.Controls.Add(txtName);
-            grbInformation.Controls.Add(lblName);
+            grbInformation.Controls.Add(txtFullName);
             grbInformation.Controls.Add(txtCode);
+            grbInformation.Controls.Add(lblFullName);
             grbInformation.Controls.Add(lblCode);
             grbInformation.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grbInformation.ForeColor = Color.Blue;
-            grbInformation.Location = new Point(12, 151);
+            grbInformation.Location = new Point(62, 151);
             grbInformation.Name = "grbInformation";
             grbInformation.Size = new Size(515, 388);
-            grbInformation.TabIndex = 1;
+            grbInformation.TabIndex = 5;
             grbInformation.TabStop = false;
             grbInformation.Text = "Thông tinh sinh viên";
             // 
             // cbFaculty
             // 
             cbFaculty.FormattingEnabled = true;
-            cbFaculty.Items.AddRange(new object[] { "Công Nghệ Thông Tin", "Ngôn Ngữ Anh" });
+            cbFaculty.Items.AddRange(new object[] { "Công Nghệ Thông Tinh", "Ngôn Ngữ Anh" });
             cbFaculty.Location = new Point(127, 196);
             cbFaculty.Name = "cbFaculty";
             cbFaculty.Size = new Size(382, 33);
@@ -112,22 +101,12 @@
             lblFaculty.TabIndex = 0;
             lblFaculty.Text = "Khoa";
             // 
-            // txtName
+            // txtFullName
             // 
-            txtName.Location = new Point(127, 134);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(382, 31);
-            txtName.TabIndex = 1;
-            // 
-            // lblName
-            // 
-            lblName.Anchor = AnchorStyles.Right;
-            lblName.AutoSize = true;
-            lblName.Location = new Point(55, 134);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(66, 25);
-            lblName.TabIndex = 0;
-            lblName.Text = "Họ tên";
+            txtFullName.Location = new Point(127, 134);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(382, 31);
+            txtFullName.TabIndex = 1;
             // 
             // txtCode
             // 
@@ -135,6 +114,15 @@
             txtCode.Name = "txtCode";
             txtCode.Size = new Size(382, 31);
             txtCode.TabIndex = 1;
+            // 
+            // lblFullName
+            // 
+            lblFullName.AutoSize = true;
+            lblFullName.Location = new Point(55, 137);
+            lblFullName.Name = "lblFullName";
+            lblFullName.Size = new Size(66, 25);
+            lblFullName.TabIndex = 0;
+            lblFullName.Text = "Họ tên";
             // 
             // lblCode
             // 
@@ -145,75 +133,80 @@
             lblCode.TabIndex = 0;
             lblCode.Text = "Mã số SV";
             // 
-            // btnCreate
+            // lblTitle
             // 
-            btnCreate.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCreate.Location = new Point(181, 557);
-            btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(94, 39);
-            btnCreate.TabIndex = 2;
-            btnCreate.Text = "Thêm";
-            btnCreate.UseVisualStyleBackColor = true;
-            btnCreate.Click += btnCreate_Click;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUpdate.Location = new Point(307, 557);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(94, 39);
-            btnUpdate.TabIndex = 2;
-            btnUpdate.Text = "Sửa";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDelete.Location = new Point(433, 557);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(94, 39);
-            btnDelete.TabIndex = 2;
-            btnDelete.Text = "Xóa";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
-            // 
-            // btnExit
-            // 
-            btnExit.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnExit.Location = new Point(1176, 659);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(94, 39);
-            btnExit.TabIndex = 2;
-            btnExit.Text = "Thoát";
-            btnExit.UseVisualStyleBackColor = true;
-            btnExit.Click += btnExit_Click;
+            lblTitle.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.Blue;
+            lblTitle.Location = new Point(62, 9);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(1258, 139);
+            lblTitle.TabIndex = 4;
+            lblTitle.Text = "Quản lí thông tin Sinh Viên";
+            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // dgvData
             // 
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Location = new Point(559, 151);
+            dgvData.Location = new Point(609, 151);
             dgvData.Name = "dgvData";
             dgvData.RowHeadersWidth = 51;
             dgvData.Size = new Size(711, 477);
-            dgvData.TabIndex = 3;
-            dgvData.CellClick += dgvData_CellClick;
+            dgvData.TabIndex = 10;
+            // 
+            // btnExit
+            // 
+            btnExit.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnExit.Location = new Point(1226, 659);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(94, 39);
+            btnExit.TabIndex = 6;
+            btnExit.Text = "Thoát";
+            btnExit.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDelete.Location = new Point(483, 557);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 39);
+            btnDelete.TabIndex = 7;
+            btnDelete.Text = "Xóa";
+            btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUpdate.Location = new Point(357, 557);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 39);
+            btnUpdate.TabIndex = 8;
+            btnUpdate.Text = "Sửa";
+            btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnCreate
+            // 
+            btnCreate.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCreate.Location = new Point(231, 557);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(94, 39);
+            btnCreate.TabIndex = 9;
+            btnCreate.Text = "Thêm";
+            btnCreate.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1282, 710);
+            ClientSize = new Size(1374, 707);
+            Controls.Add(grbInformation);
+            Controls.Add(lblTitle);
             Controls.Add(dgvData);
             Controls.Add(btnExit);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnCreate);
-            Controls.Add(grbInformation);
-            Controls.Add(lblTitle);
             Name = "Form1";
-            Text = "Quản lý thông tin Sinh Viên";
-            Load += Form1_Load;
+            Text = "Form1";
             grbInformation.ResumeLayout(false);
             grbInformation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();
@@ -222,20 +215,20 @@
 
         #endregion
 
-        private Label lblTitle;
         private GroupBox grbInformation;
-        private Label lblCode;
         private ComboBox cbFaculty;
         private TextBox txtAvg;
         private Label lblAvg;
         private Label lblFaculty;
-        private TextBox txtName;
-        private Label lblName;
+        private TextBox txtFullName;
         private TextBox txtCode;
-        private Button btnCreate;
-        private Button btnUpdate;
-        private Button btnDelete;
-        private Button btnExit;
+        private Label lblFullName;
+        private Label lblCode;
+        private Label lblTitle;
         private DataGridView dgvData;
+        private Button btnExit;
+        private Button btnDelete;
+        private Button btnUpdate;
+        private Button btnCreate;
     }
 }

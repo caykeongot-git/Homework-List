@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.22">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1652.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Day_7.BLL\Day_7.BLL.csproj" />
+    <ProjectReference Include="..\DAy_7.DAL\DAy_7.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="dsXetNghiem.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsXetNghiem.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dsXetNghiem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsXetNghiem.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
