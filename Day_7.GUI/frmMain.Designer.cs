@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
@@ -47,6 +48,10 @@
             txtID = new TextBox();
             label2 = new Label();
             dgvNhanVien = new DataGridView();
+            colID = new DataGridViewTextBoxColumn();
+            colName = new DataGridViewTextBoxColumn();
+            colSL = new DataGridViewTextBoxColumn();
+            colKQ = new DataGridViewTextBoxColumn();
             tableLayoutPanel3 = new TableLayoutPanel();
             menuStrip1 = new MenuStrip();
             chứcNăngToolStripMenuItem = new ToolStripMenuItem();
@@ -56,10 +61,6 @@
             toolStripMenuItem1 = new ToolStripMenuItem();
             toolStripMenuItem2 = new ToolStripMenuItem();
             label1 = new Label();
-            colID = new DataGridViewTextBoxColumn();
-            colName = new DataGridViewTextBoxColumn();
-            colSL = new DataGridViewTextBoxColumn();
-            colKQ = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
@@ -282,6 +283,34 @@
             dgvNhanVien.TabIndex = 1;
             dgvNhanVien.CellFormatting += dgvNhanVien_CellFormatting;
             // 
+            // colID
+            // 
+            colID.DataPropertyName = "ID";
+            colID.HeaderText = "CMND/CCCD";
+            colID.MinimumWidth = 6;
+            colID.Name = "colID";
+            // 
+            // colName
+            // 
+            colName.DataPropertyName = "HoTen";
+            colName.HeaderText = "Họ và Tên";
+            colName.MinimumWidth = 6;
+            colName.Name = "colName";
+            // 
+            // colSL
+            // 
+            colSL.DataPropertyName = "SoLanXN";
+            colSL.HeaderText = "Số Lần XN";
+            colSL.MinimumWidth = 6;
+            colSL.Name = "colSL";
+            // 
+            // colKQ
+            // 
+            colKQ.DataPropertyName = "AmTinh";
+            colKQ.HeaderText = "Kết Quả";
+            colKQ.MinimumWidth = 6;
+            colKQ.Name = "colKQ";
+            // 
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.ColumnCount = 1;
@@ -360,34 +389,6 @@
             label1.Text = "THÔNG TIN XÉT NGHIỆM";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // colID
-            // 
-            colID.DataPropertyName = "ID";
-            colID.HeaderText = "CMND/CCCD";
-            colID.MinimumWidth = 6;
-            colID.Name = "colID";
-            // 
-            // colName
-            // 
-            colName.DataPropertyName = "HoTen";
-            colName.HeaderText = "Họ và Tên";
-            colName.MinimumWidth = 6;
-            colName.Name = "colName";
-            // 
-            // colSL
-            // 
-            colSL.DataPropertyName = "SoLanXN";
-            colSL.HeaderText = "Số Lần XN";
-            colSL.MinimumWidth = 6;
-            colSL.Name = "colSL";
-            // 
-            // colKQ
-            // 
-            colKQ.DataPropertyName = "AmTinh";
-            colKQ.HeaderText = "Kết Quả";
-            colKQ.MinimumWidth = 6;
-            colKQ.Name = "colKQ";
-            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
@@ -395,6 +396,7 @@
             ClientSize = new Size(1390, 783);
             Controls.Add(tableLayoutPanel1);
             Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "QUẢN LÝ XÉT NGHIỆM";
