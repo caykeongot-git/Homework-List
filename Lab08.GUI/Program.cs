@@ -14,4 +14,4 @@ namespace Lab08.GUI
             Application.Run(new frmMain());
         }
     }
-}
+} 
